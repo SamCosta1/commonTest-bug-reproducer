@@ -1,0 +1,28 @@
+[versions]
+kotlinx-coroutines-core = "1.7.3"
+kotlinxCoroutinesTest = "1.7.3"
+kotlin = "1.9.10"
+agp = "8.1.2"
+junit = "1.1.5"
+compose = "1.5.3"
+kotlinx-coroutines = "1.7.3"
+lifecycle = "2.6.2"
+compose-activity = "1.8.0"
+[libraries]
+# Compose
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity"  }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+androidx-compose-uiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+# Android Lifecycle
+androidx-lifecycleViewModelCompose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-lifecycleRuntimeCompose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+androidx-lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+# Kotlin
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref="kotlinx-coroutines" }
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
